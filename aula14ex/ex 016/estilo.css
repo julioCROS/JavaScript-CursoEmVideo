@@ -1,0 +1,63 @@
+body{
+    background-color: rgb(147, 184, 252);
+    font: normal 15pt Arial;
+
+}
+
+header{
+    color: white;
+    margin: auto;
+    text-align: center;
+}
+
+
+section{
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+    padding: 15px;
+    width: 500px;
+    text-align: center;
+    margin: auto;
+    box-shadow: 3px 3px 3px rgba(0, 4, 255, 0.26); /* [Lateral, Vertical, Espalhamento]  */
+
+}
+
+footer{
+    margin-top: 30px;
+    text-align: center;
+    color: rgb(255, 255, 255);
+}
+
+h1{
+    font-size: 60pt;
+    text-shadow: 5px 5px 1px rgb(0, 0, 0);
+    -webkit-text-stroke-width: 3px;
+    -webkit-text-stroke-color: rgba(191, 212, 3, 0.247);
+}
+
+div#infoData{
+    margin-top: 5px;
+    font-style: italic;
+}
+
+div#inputData{
+    margin-top: 10px;
+}
+
+input#init, input#end, input#step{
+    border-radius: 50px;
+    text-align: center;
+    font-size: 15px;
+}
+
+input#btnCont{
+    margin-top: 30px;
+    width: 200px;
+    height: 50px;
+    border-radius: 70px;
+    border-color: rgb(145, 145, 145);
+}
+
+div#res{
+    margin-top: 20px;
+}

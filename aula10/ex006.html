@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio DOM - 2</title>
+    <style>
+        div#area{
+            background-color: forestgreen;
+            font: normal 20pt Arial;
+            color: rgb(255, 255, 255);
+            width: 200px;
+            height: 200px;
+            line-height: 200px;
+            text-align: center;            
+        }
+    </style>
+</head>
+<body>
+    <div id="area">Interaja...</div>
+
+    <script>
+
+        var areaText = document.getElementById('area')       
+        areaText.addEventListener('mouseenter', entrar)
+        areaText.addEventListener('mouseout', sair)
+        areaText.addEventListener('click', clicar)
+
+        function getRandomColor() {
+            var letters = '0123456789ABCDEF';
+            var color = '#';
+            for (var i = 0; i < 6; i++) {
+                color += letters[Math.floor(Math.random() * 16)];
+            }
+            return color;
+        }
+
+        function entrar(){
+            areaText.innerText = 'Entrou'
+        }
+
+        function sair(){
+            areaText.innerText = 'Saiu'
+        }
+
+        function clicar(){
+            areaText.style.background = getRandomColor()
+            areaText.innerText = 'Clicou'
+        }
+
+    </script>
+</body>
+</html>

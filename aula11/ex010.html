@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de multas</title>
+    <style>
+        body {
+            background-color: rgb(100, 155, 172);
+        }
+
+        h1#title {
+            text-align: center;
+            font-size: 100pt;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            color: rgb(100, 155, 172);
+            -webkit-text-stroke-width: 3px;
+            -webkit-text-stroke-color: rgb(91, 7, 247);
+
+        }
+
+        p#infoText {
+            margin-top: -35pt;
+            text-align: center;
+            font-size: 25pt;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+        }
+
+        input#btnEnviar {
+            margin-top: 20pt;
+            margin-left: 600pt;
+            align-items: center;
+            width: 200pt;
+            height: 25pt;
+        }
+
+        input#velocidade {
+            margin-left: 600pt;
+            width: 195pt;
+            height: 50pt;
+            align-items: center;
+            text-align: center;
+            font-size: 50pt;
+        }
+
+        div#resposta {
+            margin-right: 28pt;
+            margin-top: 30pt;
+            text-align: center;
+            font: normal 30pt Arial;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 id='title'>Sistema de multas</h1>
+    <p id="infoText">Bem-vindo ao <strong>Sistema de Multas</strong>, informe a velocidade no campo abaixo:</p>
+    <input type="text" id="velocidade"> <strong>Km/h</strong>
+    <input type="button" id='btnEnviar' value="Consultar" onclick="enviarInfo()">
+    <div id='resposta'>Resposta:</div>
+
+    <script>
+        function enviarInfo() {
+            var velocidade = Number(document.getElementById('velocidade').value)
+            var resp = document.getElementById('resposta')
+            resp.innerHTML = `Sua velocidade atual = <strong>${velocidade}</strong>Km/h`
+            if (velocidade > 60) {
+                resp.innerHTML += `<p>Você está <strong>MULTADO</strong> por excesso de velocidade!</p>`
+            }
+            resp.innerHTML += `<p>Dirija com cuidado e utilize o cinto de segurança.</p>`
+        }
+    </script>
+
+</body>
+
+</html>

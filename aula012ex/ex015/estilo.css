@@ -1,0 +1,45 @@
+body{
+    background-color: rgb(147, 184, 252);
+    font: normal 15pt Arial;
+
+}
+
+header{
+    color: white;
+    margin: auto;
+    text-align: center;
+}
+
+
+section{
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+    padding: 15px;
+    width: 700px;
+    text-align: center;
+    margin: auto;
+    box-shadow: 3px 5px 10px rgba(4, 7, 223, 0.527); /* [Lateral, Vertical, Espalhamento]  */
+
+}
+
+footer{
+    margin-top: 20px;
+    text-align: center;
+    font-style: italic;
+    color: blanchedalmond;
+    font-family:'Arial' ;
+}
+
+div#res{
+    margin-top: 50pt;
+    font-style: italic;
+    font-size: 15pt;
+}
+
+img#foto{
+    text-align: center;
+    width: 50%;
+    margin-top: 20pt;
+    height: 50%;
+    border-radius: 50%;
+}

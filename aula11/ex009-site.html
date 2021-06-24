@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>저는 무슨 나라 왔습니까?</title>
+    <style>
+        h1#title {
+            font-size: 100pt;
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: center;
+            color: white;
+            -webkit-text-stroke-width: 3px;
+            -webkit-text-stroke-color: tomato;
+        }
+
+        p#traduc1 {
+            font-size: 20pt;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            font-style: italic;
+            text-align: center;
+            margin-top: -75pt;
+        }
+
+        div#info {
+            font-size: 40pt;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            text-align: center;
+            margin-top: -50pt;
+        }
+
+        div#submitSession {
+            font-size: 40pt;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            text-align: center;
+
+        }
+
+        input#pais {
+            height: 40pt;
+            width: 300pt;
+            margin-top: -100pt;
+            font-size: 35pt;
+            text-align: center;
+        }
+
+        input#btnEnviar {
+            align-items: center;
+            width: 305pt;
+            height: 45pt;
+            margin-top: 10pt;
+            background-color: #000000;
+            border: 2px solid tomato;
+            border-radius: 30pt;
+            color: tomato;
+            font-size: 25pt;
+        }
+
+        div.wrapper {
+            text-align: center;
+            margin-top: 40pt;
+        }
+
+        div#textoResposta {
+            margin-top: 50pt;
+            display: flex;
+            flex-direction: column;
+            word-wrap: break-word;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        div.super-texto {
+            font-size: 100pt;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 id='title'>무슨 나라 왔습니까?</h1>
+    <div id='info'>당신의 본국을 써 주세요:</div>
+    <div class="wrapper">
+        <input type="text" id='pais'>
+        <div></div>
+        <input type="button" id='btnEnviar' value="보내다" onmousedown="mouseClick()" onmouseout="mouseOut()"
+            onmousemove="mouseMove()">
+        <div></div>
+        <div id="textoResposta"> Hehe </div>
+    </div>
+
+    <script>
+        var paisOrigem = document.getElementById('pais')
+        var textoResp = document.getElementById('textoResposta')
+        var botaoEnviar = document.getElementById('btnEnviar')
+
+        function mouseClick() {
+            botaoEnviar.style.border = "4px solid tomato";
+            if ((paisOrigem.value == '한국') || (paisOrigem.value == '대한민국')) {
+                textoResp.innerHTML = '와아아!!! 대단해. <div class="super-texto"><strong>한국인이에요</strong></div>'
+            } else if (paisOrigem.value == '브라질') {
+                textoResp.innerHTML = '나이스!!! <div class="super-texto"><strong>브라질</strong></div> 사람이에요'
+            } else {
+                textoResp.innerHTML = 'Hmmmmmm, <div class="super-texto"><strong>외국인이에요</strong></div>'
+            }
+        }
+
+        function mouseOut() {
+            botaoEnviar.style.border = "2px solid tomato";
+
+        }
+
+        function mouseMove() {
+            botaoEnviar.style.border = "3px solid #eecf22";
+
+
+        }
+
+    </script>
+
+</body>
+
+</html>
